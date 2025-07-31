@@ -13,7 +13,4 @@ COPY . .
 # Build TypeScript
 RUN npm run build
 
-# Remove dev dependencies after build
-RUN npm ci --production && npm cache clean --force
-
 CMD ["node", "./dist/bin/www.js"]
